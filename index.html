@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>piedra papel o tijera APOSTANDO</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link href="./resources/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <header class="header-back">
+      <div class="layout">
+        <div class="balance-container">
+          <div class="open-popup-container">
+            <div class="open-popup-button">
+              <input id="open-popup" type="button" value="+" />
+            </div>
+          </div>
+          <h3 id="balance-total">$<span id="balance">5.00</span></h3>
+          <div id="popup-addcash-wrapper">
+            <div id="popup-addcash">
+              <form method="POST">
+                <select id="amount">
+                  <option value="5">$5</option>
+                  <option value="10">$10</option>
+                  <option value="15">$15</option>
+                </select>
+                <input
+                  id="sum-ammount-button"
+                  type="button"
+                  value="SUMAR"
+                  onclick="sumAmount()"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <h2 class="header-modes">MODOS</h2>
+        <nav class="nav">
+          <ul class="modes-list">
+            <li class="modes-items" id="classic-mode">clasico</li>
+            <li class="modes-items" id="leverage-mode">apalancado</li>
+            <li class="modes-items" id="sixinone-mode">6 en 1</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="midscreen-logo-container">
+      <div class="sep-line"></div>
+      <div class="ppot-logo">
+        <h1>
+          Piedra<br />
+          Papel o<br />
+          Tijera
+        </h1>
+      </div>
+    </div>
+    <main>
+      <div class="game-pt1-back">
+        <div class="layout">
+          <h3 class="chose-one-tittle">Elegi una</h3>
+          <form class="game-pt1-mid" method="POST">
+            <select class="answers" id="answers">
+              <option value="piedra">Piedra</option>
+              <option value="papel">Papel</option>
+              <option value="tijera">Tijera</option>
+            </select>
+            <div class="bet-section">
+              <div class="bet-amount-container">
+                <h3 class="bet-amount">$<span id="bet">0.50</span></h3>
+              </div>
+              <div class="bet-dec-inc-section">
+                <input
+                  id="inc-bet-p"
+                  class="inc-bet-button bet-button"
+                  type="button"
+                  value="+"
+                  onclick="increaseBet(0.5)"
+                />
+                <input
+                  id="inc-bet-pp"
+                  class="inc-bet-button bet-button"
+                  type="button"
+                  value="++"
+                  onclick="increaseBet(1.00)"
+                />
+                <input
+                  id="inc-bet-ppp"
+                  class="inc-bet-button bet-button"
+                  type="button"
+                  value="+++"
+                  onclick="increaseBet(5.00)"
+                />
+
+                <input
+                  id="dec-bet-p"
+                  class="dec-bet-button bet-button"
+                  type="button"
+                  value="-"
+                  onclick="decreaseBet(0.50)"
+                />
+                <input
+                  id="dec-bet-pp"
+                  class="dec-bet-button bet-button"
+                  type="button"
+                  value="- -"
+                  onclick="decreaseBet(1.00)"
+                />
+                <input
+                  id="dec-bet-ppp"
+                  class="dec-bet-button bet-button"
+                  type="button"
+                  value="- - -"
+                  onclick="decreaseBet(5.00)"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="game-pt2-back">
+        <div class="layout">
+          <input
+            class="playbutton"
+            type="button"
+            value="JUGAR!"
+            onclick="exejuego()"
+          />
+        </div>
+      </div>
+      <div class="game-pt3-back">
+        <div class="response-container layout">
+          <div class="response-area">
+            <span id="response"
+              ></span
+            >
+          </div>
+          <div class="final-response-area">
+            <span id="final-response">JUGA CAGON</span>
+          </div>
+          <div class="results-container">
+            <div class="result-amount-area">
+              <h3 class="result-amount">
+                <span id="result-amount">+$0.00</span>
+              </h3>
+            </div>
+            <span class="results-sum" id="res-positivos">0</span>
+            <span class="results-sum" id="res-negativos">0</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./resources/code.js" type="text/javascript"></script>
+</html>

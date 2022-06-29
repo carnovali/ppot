@@ -1,0 +1,410 @@
+:root {
+  --fontmonstserrat: "Montserrat", sans-serif;
+  --fontlato: "Lato", sans-serif;
+  --verde: #cbb36d;
+  --rojo: #e27d63;
+  --violetafondo: #76436c;
+  --violetaoscuro: #733767;
+  --violetaoscuro2: #5c2c52;
+  --amarilloclaro: #ffdabc;
+  --amarillomain: #ff9944;
+  --amarillooscuro: #dd7d2d;
+  --negro15: rgba(0, 0, 0, 0.15);
+  --negro30: rgba(0, 0, 0, 0.3);
+  --negro50: rgba(0, 0, 0, 0.5);
+  --blanco15: rgba(255, 255, 255, 0.15);
+  --responsecolor: #cbb36d;
+  text-decoration: none;
+  font-family: var(--fontmonstserrat);
+  font-size: 10px;
+}
+body {
+  background-color: var(--violetafondo);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+ul,
+input,
+option {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+option {
+  background-color: var(--amarilloclaro);
+  color: var(--violetaoscuro);
+  text-align: center;
+  font-weight: 500;
+}
+
+.container,
+.header-back,
+.game-pt1-back,
+.game-pt2-back,
+.game-pt3-back {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-back {
+  background-image: linear-gradient(to bottom, var(--negro30), var(--negro30)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0));
+}
+
+.game-pt1-back {
+  background-color: var(--negro15);
+}
+
+.game-pt3-back {
+  background-color: var(--blanco15);
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin: 0 7.5vw;
+}
+
+.balance-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.75vh;
+}
+
+#balance-total {
+  font-size: 1.6rem;
+  color: var(--amarilloclaro);
+}
+
+.open-popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.open-popup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--verde);
+  border: solid, var(--verde), 1px;
+  border-radius: 4px;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+#open-popup {
+  background: none;
+  color: var(--violetaoscuro);
+  padding: 0, 0, 5rem;
+  font-weight: 800;
+  font-size: 1.8rem;
+  border: none;
+}
+
+.nav {
+  margin-bottom: 1rem;
+}
+
+.header-modes {
+  color: var(--amarillomain);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#classic-mode {
+  font-weight: 400;
+  color: var(--amarilloclaro);
+}
+
+.modes-list {
+  font-family: var(--fontlato);
+  font-weight: 100;
+  display: flex;
+  justify-content: space-around;
+  color: var(--amarillomain);
+  font-size: 1.5rem;
+}
+
+.sep-line {
+  height: 0.5rem;
+  width: 100vw;
+  background-color: var(--amarillomain);
+}
+
+.ppot-logo {
+  margin: 1.75vh 0;
+}
+
+.ppot-logo h1 {
+  font-size: 5.8rem;
+  color: var(--amarillomain);
+  text-align: center;
+  line-height: 6.2rem;
+  filter: drop-shadow(-3px 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+.chose-one-tittle {
+  color: var(--amarillomain);
+  font-family: var(--fontlato);
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.answers {
+  box-sizing: content-box;
+  align-self: center;
+  font-family: var(--fontmonstserrat);
+  width: 100%;
+  color: var(--amarillomain);
+  background-color: var(--negro15);
+  padding: 0.3rem;
+  border: var(--amarillomain) solid 4px;
+  border-radius: 10px;
+  text-align-last: center;
+  font-size: 3rem;
+  font-weight: 500;
+  appearance: none;
+  box-shadow: 0px 4px 4px var(--negro30);
+}
+
+.game-pt1-mid {
+  display: flex;
+  flex-direction: column;
+}
+
+.bet-section {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin: 1.5rem 0;
+  filter: drop-shadow(0px 2px 4px var(--negro30));
+}
+
+.bet-amount-container {
+  grid-area: 1 / 1 / 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  background: var(--amarilloclaro);
+  border: 5px solid var(--amarillomain);
+  border-radius: 8px;
+}
+
+.bet-amount {
+  font-size: 2.8rem;
+  color: var(--violetaoscuro);
+  font-weight: 500;
+}
+
+#inc-bet-p {
+  grid-area: inc-p;
+}
+
+#inc-bet-pp {
+  grid-area: inc-pp;
+}
+
+#inc-bet-ppp {
+  grid-area: inc-ppp;
+}
+
+#dec-bet-p {
+  grid-area: dec-p;
+}
+
+#dec-bet-pp {
+  grid-area: dec-pp;
+}
+
+#dec-bet-ppp {
+  grid-area: dec-ppp;
+}
+
+.bet-button {
+  color: var(--violetafondo);
+  font-size: 2.8rem;
+  font-weight: 500;
+  appearance: none;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 2.5rem;
+}
+
+.inc-bet-button {
+  background-color: var(--verde);
+  border: var(--verde) solid 1px;
+}
+
+.dec-bet-button {
+  background-color: var(--rojo);
+  border: var(--rojo) solid 1px;
+  align-items: center;
+}
+
+.bet-dec-inc-section {
+  grid-area: 1 / 2 / 1 / 2;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "inc-p inc-pp inc-ppp"
+    "dec-p dec-pp dec-ppp";
+  grid-gap: 0.7rem;
+  margin-left: 1.5rem;
+}
+
+.playbutton {
+  background-color: var(--amarillomain);
+  border: solid 5px var(--amarillomain);
+  border-radius: 0px 0px 20px 20px;
+  padding: 1.1rem;
+  margin-bottom: 1.6rem;
+  color: #73376700;
+  font-family: var(--fontmonstserrat);
+  font-weight: 800;
+  font-size: 4.2rem;
+  text-shadow: 1px 1px 1px var(--violetaoscuro), 0 0 0 hsl(312, 61%, 12%);
+  box-shadow: 0px 4px 4px var(--negro30);
+}
+
+.playbutton:hover {
+  box-sizing: border-box;
+  color: var(--amarillooscuro);
+  background-color: var(--violetaoscuro2);
+  border: solid 5px var(--amarillooscuro);
+  text-shadow: 3px 3px 2px var(--negro30);
+  box-shadow: 9px 9px 6px 0px #00000040 inset, 0px 4px 4px var(--negro30);
+  cursor: pointer;
+}
+
+.response-area {
+  background-color: var(--negro50);
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 11px;
+}
+
+#response {
+  color: var(--amarilloclaro);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.final-response-area {
+  background-color: var(--violetaoscuro2);
+  border: solid 0.5rem var(--responsecolor);
+  border-radius: 10px 10px 10px 0px;
+  text-align: center;
+  padding: 0.2rem;
+  box-shadow: 0px 3px 3px var(--negro30);
+}
+
+#final-response {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--responsecolor);
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "amount pos" "amount neg";
+  margin-bottom: 2rem;
+  font-family: var(--fontlato);
+  font-weight: 700;
+}
+
+.result-amount-area {
+  grid-area: amount;
+  display: flex;
+  background-color: var(--responsecolor);
+  border-radius: 0px 0px 10px 10px;
+  margin-right: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 3px var(--negro30);
+}
+
+.result-amount {
+  position: relative;
+  bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--violetaoscuro);
+  text-align: center;
+}
+
+.results-sum {
+  font-size: 1.6rem;
+  text-align: end;
+  margin-right: 1rem;
+}
+
+#res-positivos {
+  grid-area: pos;
+  color: var(--verde);
+}
+
+#res-negativos {
+  grid-area: neg;
+  color: var(--rojo);
+}
+
+#popup-addcash-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#popup-addcash {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .layout {
+    margin: 0 30vw;
+  }
+}
